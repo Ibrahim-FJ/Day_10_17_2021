@@ -1,6 +1,6 @@
 fun main(){
 
-    val isUrgent : (Int, String) -> String = { age, name ->
+    val isUrgent  = { age : Int, name : String ->
         if (age >= 65)
             "$name, ${age >= 65}"
         else
