@@ -1,13 +1,23 @@
+import kotlin.random.Random
+import kotlin.random.nextInt
+
 fun main(){
 
-    val isUrgent  = { age : Int, name : String ->
-        if (age >= 65)
-            "$name, ${age >= 65}"
-        else
-        "$name, ${age >= 65}"
+
+    val greetingFunction = { playerName: String, buildingNo: Int ->
+
+
+
+        val currentYear = 2021
+        println("Adding $buildingNo hours")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
 
     }
 
-    println(isUrgent(90, "Ibrahim"))
+    fun runSimulation(playerName : String, greetingFunction : (String, Int) -> String){
+        val buildingNo = Random.nextInt(1..5)
+        println(greetingFunction(playerName, buildingNo))
+    }
+    runSimulation("Ibrahim", greetingFunction)
 
 }
