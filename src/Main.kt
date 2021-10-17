@@ -14,10 +14,12 @@ fun main(){
 
     }
 
-    fun runSimulation(playerName : String, greetingFunction : (String, Int) -> String){
-        val buildingNo = Random.nextInt(1..5)
-        println(greetingFunction(playerName, buildingNo))
-    }
+
     runSimulation("Ibrahim", greetingFunction)
 
+}
+
+inline fun runSimulation(playerName : String, greetingFunction : (String, Int) -> String){
+    val buildingNo = Random.nextInt(1..5)
+    println(greetingFunction(playerName, buildingNo))
 }
